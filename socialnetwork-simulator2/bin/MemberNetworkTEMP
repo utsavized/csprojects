@@ -1,0 +1,91 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * Class to Build the network
+ * @author Utsav Pandey
+ */
+public class MemberNetwork implements Network{
+	private List<LinkedList<Object>> system;
+	
+	public MemberNetwork(){
+		system = new ArrayList<LinkedList<Object>>();
+	}
+	
+	/**
+	 * Adds a new member to the system
+	 * @param 
+	 */
+	@Override
+	public void addMember() {
+		system.add(new LinkedList<Object>());
+	}
+	
+	/**
+	 * Removes a member from the system
+	 * @param ID
+	 * @returns removed memeber network
+	 */
+	@Override
+	public List<Object> removeMember(Object ID) {
+		Integer index = (Integer) ID;
+		if(!system.isEmpty())
+			return system.remove(index.intValue());
+		else
+			return Collections.emptyList();
+	}
+	
+	/**
+	 * Adds a friend to the member's network, adds member to friend's network
+	 * @param memberID, friendID
+	 * @return true, false
+	 */
+	@Override
+	public boolean addFriend(Object memberID, Object friendID) {
+		Integer member = (Integer) memberID;
+		Integer friend = (Integer) friendID;
+		if(!system.isEmpty() && (Integer)memberID < system.size() && (Integer)friendID < system.size()){
+			system.get(member.intValue()).add(friendID);
+			system.get(friend.intValue()).add(memberID);
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Removes a friend from the member's network, removes member from friend's network
+	 * @param memberID, friendID
+	 * @return true, false
+	 */
+	
+	@Override
+	public Object removeFriend(Object memberID, Object friendID) {
+		Integer member = (Integer) memberID;
+		Integer friend = (Integer) friendID;
+		if(!system.isEmpty() && (Integer)memberID < system.size() && (Integer)friendID < system.size()){
+			system.get(member.intValue()).remove(friendID);
+			system.get(friend.intValue()).remove(memberID);
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * Return's a member's network
+	 * @param ID
+	 * @return Member's network
+	 */
+	@Override
+	public List<Object> getNetwork(Object ID) {
+		Integer index = (Integer) ID;
+		if(!system.isEmpty()){
+			if(system.get(index.intValue()).isEmpty())
+				return (LinkedList<Object>) Collections.emptyList();
+			else
+				return system.get(index.intValue());
+		}
+		return (LinkedList<Object>) Collections.emptyList();
+	}
+}

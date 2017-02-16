@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+.style3 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #999999; }
+.style4 {color: #999999}
+-->
+
+
+.textbox {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #999999;
+	border-top-style: groove;
+	border-right-style: groove;
+	border-bottom-style: groove;
+	border-left-style: groove;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+	color: #FFFFFF;
+}
+.table_class {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #666666;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+.textbox_alt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #FFFFFF;
+	border-top-style: double;
+	border-right-style: double;
+	border-bottom-style: double;
+	border-left-style: double;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+	color: #000033;
+}
+.style6 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #000000; }
+.style7 {color: #000000}
+-->
+
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="generate.php">
+  <p class="style3"><span class="style7">HostName</span>
+    <input name="hostname" type="text" class="textbox_alt" id="hostname" value="mysql.lisa-iclub.com" size="40" maxlength="40" />
+</p>
+  <p class="style3"><span class="style7">Username</span>
+    <input name="username" type="text" class="textbox_alt" id="username" value="lisai001" size="40" maxlength="40" />
+    </p>
+  <p class="style3"><span class="style7">Password</span>
+    <input name="password" type="password" class="textbox_alt" id="password" size="40" maxlength="40" />
+  </p>
+  <p class="style4"><span class="style1"><span class="style7">DataBase Name</span>
+    <input name="dbname" type="text" class="textbox_alt" id="dbname" value="lisai001" size="40" maxlength="40" />
+        <br />
+  </span></p>
+  <p class="style4"><span class="style6"> Table Name </span>
+      <input name="tablename" type="text" class="textbox_alt" id="tablename" value="student1" size="40" maxlength="40" />
+  </p>
+  <p>
+    <span class="style1">No. of Puzzles to Generate </span>
+    <select name="puzzle_num" class="textbox_alt" id="puzzle_num">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+      <option value="25">25</option>
+      <option value="30">30</option>
+      <option value="35">35</option>
+      <option value="40">40</option>
+      <option value="45">45</option>
+      <option value="50">50</option>
+    </select>
+</p>
+  <p>
+    <span class="style1">Difficulty</span>
+    <select name="diff" class="textbox_alt" id="diff">
+      <option value="1">Timid</option>
+      <option value="2">Normal</option>
+      <option value="3">Insane</option>
+    </select>
+  </p>
+  <p>
+    <input name="Submit" type="submit" class="textbox" value="Submit" />
+</p>
+</form>
+</body>
+</html>

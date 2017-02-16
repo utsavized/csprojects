@@ -1,0 +1,93 @@
+<html> <head>
+<title>Classroom Clicker</title>
+<style type="text/css">
+body {
+	background-color: #333;
+}
+.Link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+}
+.Normal {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	line-height: 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+.NormalCopy {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	color: #333;
+	line-height: 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+.name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #FFF;
+}
+
+.heading {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #999;
+	background-color: #333;
+}
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #CCC;
+}
+</style>
+</head>
+<body>
+<h1 class="heading">CLASSROOM CLICKER&gt;&gt; CLICKER<br>
+<em><span class="name">Utsav Pandey | Antonio CLaros Molina | Scott Krieder</span></em></h1>
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td valign="top"> <p class="Normal">
+      <label for="response"></label>
+      <textarea name="response" cols="100" rows="30" class="NormalCopy" id="response">{% for m in response %}
+{{m}}
+{% endfor %}</textarea>
+      <br>
+    </p></td>
+  </tr>
+</table>
+<p>Clicker: {{clicker}} | Channel: {{channel}}</p>
+<form method="post" action=".">
+  <table>
+  <tr>
+    <td class="Normal">Response</td>
+    <td><label for="choice"></label>
+      <select name="choice" id="choice">
+        {% for x in range %}
+        <option value="{{x}}" selected>{{x}}</option>
+      	{% endfor %}
+      </select></td>
+    <td><input type="submit"></td>
+  </tr>
+</table>
+  <input type="hidden" name="clicker" id={{clicker}} value={{clicker}}>
+  <input type="hidden" name="channel" id={{channel}} value ={{channel}}>
+    <input type="hidden" name="count" id={{count}} value ={{count}}>
+     <input type="hidden" name="status" id="status" value ={{status}}>
+     <input type="hidden" name="range" id="range" value ={{rangeVal}}>
+  <hr>
+</form>
+</body> </html>

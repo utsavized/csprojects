@@ -1,0 +1,175 @@
+Test cases for SQUARE WELL
+
+[initiatedBy] = 1
+[NoOfParticles] = 128
+[SizeOfBox]= 12
+[Temp] = 10
+[PotentialFlag] = 2
+[CyclesBtwSaves] = 500
+[TotNoOfCycles] = 10000
+[currentCycle]= 0
+[energyTop]= 0
+[energyBottom]= 0
+[lamda]= 1.70
+[sigma]= 3.067
+[epsilon]= 1.288e-21
+[rcut] = 0
+[particlePositionProvided] = 0
+
+Test1: [NoOfParticles] = 1
+Test2: [NoOfParticles] = 2
+Test3: [NoOfParticles] = 512
+Test4: [NoOfParticles] = 128
+Test5: [NoOfParticles] = 32
+Test6: [NoOfParticles] = 1024
+Test7: [NoOfParticles] = 1025
+Test8: [NoOfParticles] = -1
+
+Test1: [SizeOfBox]= -1
+Test2: [SizeOfBox]= 0
+Test3: [SizeOfBox]= 1
+Test4: [SizeOfBox]= 12
+Test5: [SizeOfBox]= 120
+Test6: [SizeOfBox]= 121
+
+Test1: [Temp] = -1
+Test2: [Temp] = 0
+Test3: [Temp] = 10
+Test4: [Temp] = 100
+
+Test1: [TotNoOfCycles] = -1
+Test2: [TotNoOfCycles] = 0
+Test3: [TotNoOfCycles] = 100
+Test4: [TotNoOfCycles] = 5000
+Test5: [TotNoOfCycles] = 95000
+Test6: [TotNoOfCycles] = 100000
+Test7: [TotNoOfCycles] = 110000
+
+Test1: [lamda]= 1.20
+Test2: [lamda]= 1.30
+Test3: [lamda]= 1.50
+Test4: [lamda]= 1.70
+Test5: [lamda]= 1.80
+
+Test1: [sigma]= 3.0
+Test2: [sigma]= 3.067
+Test3: [sigma]= 5.0
+Test4: [sigma]= 5.12
+
+Test1: [epsilon]= 1.188e-21
+Test2: [epsilon]= 1.288e-21
+Test3: [epsilon]= 5.348e-21
+Test4: [epsilon]= 8.566e-21
+Test5: [epsilon]= 9.000e-21
+
+
+
+Test cases for LENNARD JONES
+
+[initiatedBy] = 1
+[NoOfParticles] = 128
+[SizeOfBox]= 12
+[Temp] = 10
+[PotentialFlag] = 2
+[CyclesBtwSaves] = 500
+[TotNoOfCycles] = 10000
+[currentCycle]= 0
+[energyTop]= 0
+[energyBottom]= 0
+[lamda]= 1.70
+[sigma]= 3.067
+[epsilon]= 1.288e-21
+[rcut] = 0
+[particlePositionProvided] = 0
+
+Test1: [NoOfParticles] = 1
+Test2: [NoOfParticles] = 2
+Test3: [NoOfParticles] = 512
+Test4: [NoOfParticles] = 128
+Test5: [NoOfParticles] = 32
+Test6: [NoOfParticles] = 1024
+Test7: [NoOfParticles] = 1025
+Test8: [NoOfParticles] = -1
+
+Test1: [SizeOfBox]= -1
+Test2: [SizeOfBox]= 0
+Test3: [SizeOfBox]= 1
+Test4: [SizeOfBox]= 12
+Test5: [SizeOfBox]= 120
+Test6: [SizeOfBox]= 121
+
+Test1: [Temp] = -1
+Test2: [Temp] = 0
+Test3: [Temp] = 10
+Test4: [Temp] = 100
+
+Test1: [TotNoOfCycles] = -1
+Test2: [TotNoOfCycles] = 0
+Test3: [TotNoOfCycles] = 100
+Test4: [TotNoOfCycles] = 5000
+Test5: [TotNoOfCycles] = 95000
+Test6: [TotNoOfCycles] = 100000
+Test7: [TotNoOfCycles] = 110000
+
+Test1: [sigma]= 3.0
+Test2: [sigma]= 3.5
+Test3: [sigma]= 5.0
+Test4: [sigma]= 9.0
+Test5: [sigma]= 9.2
+
+Test1: [epsilon]= 1.188e-21
+Test2: [epsilon]= 1.625e-21
+Test3: [epsilon]= 2.348e-21
+Test4: [epsilon]= 3.340e-21
+Test5: [epsilon]= 4.540e-21
+
+
+
+
+Test cases for HARD SPHERE
+
+[initiatedBy] = 1
+[NoOfParticles] = 128
+[SizeOfBox]= 12
+[Temp] = 10
+[PotentialFlag] = 2
+[CyclesBtwSaves] = 500
+[TotNoOfCycles] = 10000
+[currentCycle]= 0
+[energyTop]= 0
+[energyBottom]= 0
+[lamda]= 1.70
+[sigma]= 3.067
+[epsilon]= 1.288e-21
+[rcut] = 1e-10
+[particlePositionProvided] = 0
+
+Test1: [NoOfParticles] = 1
+Test2: [NoOfParticles] = 2
+Test3: [NoOfParticles] = 512
+Test4: [NoOfParticles] = 128
+Test5: [NoOfParticles] = 32
+Test6: [NoOfParticles] = 1024
+Test7: [NoOfParticles] = 1025
+Test8: [NoOfParticles] = -1
+
+Test1: [SizeOfBox]= -1
+Test2: [SizeOfBox]= 0
+Test3: [SizeOfBox]= 1
+Test4: [SizeOfBox]= 12
+Test5: [SizeOfBox]= 120
+Test6: [SizeOfBox]= 121
+
+Test1: [Temp] = -1
+Test2: [Temp] = 0
+Test3: [Temp] = 10
+Test4: [Temp] = 100
+
+Test1: [TotNoOfCycles] = -1
+Test2: [TotNoOfCycles] = 0
+Test3: [TotNoOfCycles] = 100
+Test4: [TotNoOfCycles] = 5000
+Test5: [TotNoOfCycles] = 95000
+Test6: [TotNoOfCycles] = 100000
+Test7: [TotNoOfCycles] = 110000
+

@@ -1,0 +1,121 @@
+1. Login
+
+curl -X POST --data "username={username}&password={password}" /
+
+- Valid Login
+Eg: curl -X POST --data "username=utsav&password=test" http://127.0.0.1:8000/
+Returns:
+<?xml version="1.0" Name="WS Project 2D"?>
+ <success value = "Authenticated"></success>
+
+- Invalid Login
+Eg: curl -X POST --data "username=utsav&password=123" http://127.0.0.1:8000/
+Returns:
+<?xml version="1.0" Name="WS Project 2D"?>
+ <error value = "Could not authenticate"></error>
+
+2. Registration
+
+curl -X POST --data "username={username}&password={password}&register=1" /
+
+- Valid Registration
+Eg. C:\>curl -X POST --data "username=cat&password=test&register=1" http://127.0.0.1:8000/
+Returns:
+<?xml version="1.0" Name="WS Project 2D"?>
+ <success value = "Authenticated"></success>
+
+- Incomplete Registration
+Eg. C:\>curl -X POST --data "username=cat&password=&register=1" http://127.0.0.1:8000/
+Returns:
+<?xml version="1.0" Name="WS Project 2D"?>
+ <error value = "Both Username & Password Required"></error>
+
+- User already registered
+Eg: curl -X POST --data "username=utsav&password=test&register=1" http://127.0.0.1:8000/
+Returns:
+<?xml version="1.0" Name="WS Project 2D"?>
+ <error value = "Username already taken"></error>
+
+
+3. List All numbers cached under a user
+
+curl -X GET /users/{username}/number/
+Eg: curl -X GET http://127.0.0.1:8000/users/utsav/number/
+Returns:
+<?xml version="1.0" Name="WS Project 2
+ <number value = "3097864797"</number>
+ <number value = "7733761651"</number>
+
+4. Details for individual number under a user
+
+curl -X GET /users/{username}/number/{number}/
+
+- Number Found
+
+Eg: curl -X GET http://127.0.0.1:8000/users/utsav/number/7733761651/
+Returns:
+<?xml version="1.0" Name="WS Project 2C"?>
+ <name value = "Adam Smith"></name>
+ <number value = "7733761651"></number>
+
+- Number not found
+Eg: curl -X GET http://127.0.0.1:8000/users/utsav/number/5636636950/
+Returns:
+<?xml version="1.0" Name="WS Project 2C"?>
+ <error value = "Number not found"></error>
+
+- Invalid number
+Eg: curl -X GET http://127.0.0.1:8000/users/utsav/number/5636636/
+Returns:
+<?xml version="1.0" Name="WS Project 2C"?>
+ <error value = "Incorrect Number"></error>
+
+5. Adding a new number
+
+curl -X POST --data "id={number}" /users/{username}/number/
+
+Eg: curl -X POST --data "id=7733761651" http://127.0.0.1:8000/users/utsav/number/
+Returns:
+<?xml version="1.0" Name="WS Project 2C"?>
+ <success value = "Number Added"></success>
+
+- Number not found
+(Similar to #4)
+
+- Invalid Number
+(Similar to #4)
+
+6. Deleting a number
+
+curl -X DELETE /users/{username}/delete/{number}/
+
+Eg: curl -X DELETE http://127.0.0.1:8000/users/utsav/delete/7733761651/
+Returns:
+<?xml version="1.0" Name="WS Project 2D"?>
+ <success value = "Number Deleted"></success>
+
+- Number not found
+(Similar to #4)
+
+- Invalid Number
+(Similar to #4)
+
+7. Authentication/Session Expiration
+
+Each session lasts for one full day, after which the user will have to log in again.
+
+- Session Expired
+
+Eg: curl -X DELETE http://127.0.0.1:8000/users/utsav/delete/7733761651/
+Returns:
+<?xml version="1.0" Name="WS Project 2C API"?>
+ <error value = "Session Expired"></error>
+
+To re-login:
+curl -X POST --data "username={username}&password={password}" /
+Eg: curl -X POST --data "username=utsav&password=test" http://127.0.0.1:8000/
+Returns:
+<?xml version="1.0" Name="WS Project 2D"?>
+ <success value = "Authenticated"></success>
+
+ Then proceed to desired command again.

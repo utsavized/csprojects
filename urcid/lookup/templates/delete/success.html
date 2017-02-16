@@ -1,0 +1,61 @@
+<html> <head>
+<title>Reverse LookUp</title>
+<style type="text/css">
+body {
+	background-color: #333;
+}
+.Link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+}
+.Normal {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+}
+.name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #FFF;
+}
+
+.heading {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #999;
+	background-color: #333;
+}
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #CCC;
+}
+</style>
+</head>
+<body>
+<h1 class="heading">REVERSE PHONE LOOKUP &gt;&gt; DELETED<br>
+<em><span class="name">Utsav Pandey | Antonio CLaros Molina | Scott Krieder</span></em></h1>
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td valign="top"><span class="Normal">User: {{username}} | [<a href="/logout/{{username}}/" class="Link">Logout]</a></span></td>
+  </tr>
+</table>
+<p class="Normal">The number(s) you selected are deleted.</p>
+<p class="Normal"><a href="/users/{{username}}/delete/" class="Link">Delete  a different number &gt;&gt;</a></p>
+<p class="Normal"><a href="/users/{{username}}/number/" class="Link"> &lt;&lt; Look up a new number </a></p>
+<hr>
+
+
+</body> </html>

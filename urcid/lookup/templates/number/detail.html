@@ -1,0 +1,108 @@
+<html> <head>
+<title>REVERSE PHONE LOOKUP FOR {{ row.id }}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body {
+	background-color: #333;
+}
+.Link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+}
+.Normal {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+}
+.name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #FFF;
+}
+
+.heading {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #999;
+	background-color: #333;
+}
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #CCC;
+}
+</style>
+</head>
+<body>
+<h1 class="heading">REVERSE PHONE LOOKUP &gt;&gt; DETAILS FOR {{ row.id }}<br>
+<em><span class="name">Utsav Pandey | Antonio CLaros Molina | Scott Krieder</span></em></h1>
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td valign="top"><span class="Normal">User: {{username}} | [<a href="/logout/{{username}}/" class="Link">Logout]</a></span></td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td width="154"><strong><span class="Normal">Number</span></strong></td>
+    <td width="122" id="id"><em><span class="Normal">{{ row.id }}</span></em></td>
+  </tr>
+  <tr>
+    <td><strong><span class="Normal">Name</span></strong></td>
+    <td id="name"><em><span class="Normal">{{ row.name }}</span></em></td>
+  </tr>
+  <tr>
+    <td><strong><span class="Normal">Last Updated - WP</span></strong></td>
+    <td id="name"><em><span class="Normal">{{ row.updated }}</span></em></td>
+  </tr>
+  <tr>
+    <td><strong><span class="Normal">#Correct Reports</span></strong></td>
+    <td id="name"><em><span class="Normal">{{ row.correct }}</span></em></td>
+  </tr>
+  <tr>
+    <td><strong><span class="Normal">#Incorrect Reports</span></strong></td>
+    <td id="name"><em><span class="Normal">{{ row.incorrect }}</span></em></td>
+  </tr>
+</table>
+<hr>
+<form method="post" action=".">
+<table>
+  <tr>
+    <td colspan="2" valign="top"><span class="Normal"><strong>Report Accuracy</strong></span></td>
+    </tr>
+  <tr>
+    <td colspan="2" valign="top"><p>
+      <label>
+        <span class="Normal">
+        <input name="correct_incorrect" type="radio" id="correct" value="1" checked>
+        Correct</span></label>
+      <span class="Normal"><br>
+      <label>
+        <input type="radio" name="correct_incorrect" value="0" id="incorrect">
+        Incorrect</label>
+      </span>
+      <label></label>
+      <br>
+    </p></td>
+    <tr>
+    <td width="118" valign="top"><p>
+      <input type="submit">
+      </p></td>
+  </tr>
+</table>
+<p><a href="/users/{{username}}/number/" class="Link">&lt;&lt;Look up a new number</a><br>
+</p>
+</form>
+</body> </html>

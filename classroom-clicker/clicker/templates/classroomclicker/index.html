@@ -1,0 +1,134 @@
+<html> <head>
+<title>Classroom Clicker</title>
+<style type="text/css">
+body {
+	background-color: #333;
+}
+.Link {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+}
+.Normal {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	line-height: 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+.NormalCopy {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	color: #333;
+	line-height: 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+.name {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	color: #FFF;
+}
+
+.heading {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #999;
+	background-color: #333;
+}
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #CCC;
+}
+</style>
+</head>
+<body>
+<h1 class="heading">CLASSROOM CLICKER&gt;&gt; Home<br>
+<em><span class="name">Utsav Pandey | Antonio CLaros Molina | Scott Krieder</span></em></h1>
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td valign="top"> <p class="Normal">
+      <label for="response"></label>
+    Student</p></td>
+  </tr>
+</table>
+<form method="post" action="/clicker/" target = "_new">
+  <p>
+    <label for="clicker"></label>
+    clicker
+    <select name="clicker" id="clicker">
+      <option value="500">500</option>
+      <option value="501">501</option>
+      <option value="502">502</option>
+      <option value="503">503</option>
+      <option value="504">504</option>
+    </select>
+  </p>
+  <table>
+  <tr>
+    <td class="Normal">channel</td>
+    <td><label for="channel"></label>
+      <select name="channel" id="channel">
+        <option value="70">70</option>
+        <option value="71">71</option>
+        <option value="72">72</option>
+      </select></td>
+    <td><input type="submit"></td>
+  </tr>
+</table>
+  <input type="hidden" name="choice" id="choice">
+  <input type="hidden" name="count" id="count" value=0>
+  <input type="hidden" name="range" id="range" value=5>
+  <input type="hidden" name="status" id="status" value=0>
+  <hr>
+</form>
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+  <tr>
+    <td valign="top"><p class="Normal">
+      <label for="response3"></label>
+      Professor</p></td>
+  </tr>
+</table>
+<form name="form1" method="post" action="/clicker/" target="_new">
+  <p>
+    <label for="channel">Channel</label>
+    <select name="channel" id="channel">
+      <option value="70">70</option>
+      <option value="71">71</option>
+      <option value="72">72</option>
+    </select>
+  </p>
+  <p>#of Responses 
+    <label for="range"></label>
+    <input name="range" type="text" id="range" size="5" maxlength="2">
+  </p>
+  <p>Status 
+    <label for="status"></label>
+    <select name="status" id="status">
+      <option value="0" selected>Close</option>
+      <option value="1">Open</option>
+    </select>
+    <input type="submit" name="submit" id="submit" value="Submit">
+  </p>
+  <p>
+    <input type="hidden" name="choice" id="choice">
+    <input type="hidden" name="count" id="count" value=0>
+    <input type="hidden" name="clicker" id="clicker" value="Professor">
+  </p>
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body> </html>
